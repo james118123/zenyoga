@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PureBalance Yoga | Yoga Classes & Wellness</title>
+
+    <meta name="description" content="PureBalance Yoga offers guided yoga classes, mindful movement and wellness sessions for beginners and experienced practitioners in Sydney.">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #24352d;
+            background: #fbfaf5;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        header {
+            background: rgba(251,250,245,.97);
+            border-bottom: 1px solid #e4e5dc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #386b55;
+        }
+
+        .logo span {
+            color: #b48645;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .menu a {
+            font-size: 14px;
+            color: #34483d;
+        }
+
+        .menu a:hover {
+            color: #386b55;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #386b55;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .btn:hover {
+            background: #28513f;
+            transform: translateY(-2px);
+        }
+
+        .btn.gold {
+            background: #b48645;
+        }
+
+        .btn.gold:hover {
+            background: #936c34;
+        }
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(23,48,38,.90), rgba(23,48,38,.50)),
+                url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 690px;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            color: #e4c48d;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 610px;
+            color: #f0f4ef;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #294c3c;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #68766e;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 450px;
+            border-radius: 20px;
+            background:
+                url("https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=1000&q=85")
+                center/cover;
+        }
+
+        .about-text h2 {
+            color: #294c3c;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #657269;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #386b55;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .classes {
+            background: #eef3ed;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e3e7e1;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(32,50,40,.06);
+        }
+
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #e7efe8;
+            color: #386b55;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #294c3c;
+        }
+
+        .card p {
+            color: #6b766f;
+            font-size: 15px;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .number {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #386b55;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .testimonial-section {
+            background: #294c3c;
+            color: white;
+        }
+
+        .testimonial-section .section-title h2 {
+            color: white;
+        }
+
+        .testimonial-section .section-title p {
+            color: #d9e4dc;
+        }
+
+        .testimonial {
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .testimonial p {
+            color: #edf4ee;
+            margin-bottom: 15px;
+        }
+
+        .testimonial strong {
+            color: #e3c28b;
+        }
+
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        details {
+            background: white;
+            border: 1px solid #e2e5df;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            padding: 18px 20px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700;
+            color: #294c3c;
+        }
+
+        details p {
+            color: #69756e;
+            margin-top: 12px;
+        }
+
+        .contact {
+            background: #eef3ed;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 40px;
+        }
+
+        .contact-info h2 {
+            color: #294c3c;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #68756d;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin: 18px 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #294c3c;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(35,55,45,.07);
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 700;
+            color: #34483d;
+            font-size: 14px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d8ded8;
+            border-radius: 9px;
+            font: inherit;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #386b55;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .legal {
+            background: white;
+            border-top: 1px solid #edf0eb;
+        }
+
+        .legal-box {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .legal-box h2 {
+            color: #294c3c;
+            margin: 35px 0 12px;
+        }
+
+        .legal-box h3 {
+            color: #386b55;
+            margin: 25px 0 8px;
+        }
+
+        .legal-box p,
+        .legal-box li {
+            color: #626d67;
+            margin-bottom: 10px;
+        }
+
+        .legal-box ul {
+            padding-left: 25px;
+        }
+
+        footer {
+            background: #1e3429;
+            color: #dce8df;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer li {
+            color: #b9c8be;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.12);
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #9fb1a5;
+        }
+
+        .cookie {
+            position: fixed;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: #fff;
+            border: 1px solid #dfe4df;
+            box-shadow: 0 10px 35px rgba(0,0,0,.15);
+            border-radius: 14px;
+            padding: 18px;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .cookie p {
+            font-size: 13px;
+            color: #5d6861;
+        }
+
+        .cookie button {
+            white-space: nowrap;
+        }
+
+        .mobile-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+
+            .menu {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #fbfaf5;
+                padding: 20px;
+                flex-direction: column;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .about,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 580px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .cookie {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+            Pure<span>Balance</span> Yoga
+        </a>
+
+        <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+        <ul class="menu" id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+        </ul>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Mindful Movement • Better Balance
+            </div>
+
+            <h1>
+                Find Your Balance Through Yoga
+            </h1>
+
+            <p>
+                Discover guided yoga sessions designed to help you build
+                a consistent movement and mindfulness practice in a
+                comfortable environment.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#classes" class="btn">
+                    Explore Classes
+                </a>
+
+                <a href="#contact" class="btn gold">
+                    Get In Touch
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container about">
+
+        <div class="about-image"></div>
+
+        <div class="about-text">
+
+            <div class="eyebrow">
+                About Us
+            </div>
+
+            <h2>
+                Yoga That Fits Your Lifestyle
+            </h2>
+
+            <p>
+                PureBalance Yoga provides accessible yoga sessions for
+                people at different experience levels. Our approach focuses
+                on mindful movement, breathing awareness and creating a
+                sustainable personal practice.
+            </p>
+
+            <p>
+                Whether you are completely new to yoga or looking to
+                maintain an existing routine, our sessions are designed
+                to be simple, welcoming and easy to follow.
+            </p>
+
+            <ul class="check-list">
+                <li>Beginner-friendly sessions</li>
+                <li>Guided movement and breathing practices</li>
+                <li>Flexible class options</li>
+                <li>Supportive learning environment</li>
+            </ul>
+
+            <a href="#contact" class="btn">
+                Start Your Journey
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CLASSES -->
+
+<section class="classes" id="classes">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Our Programs
+            </div>
+
+            <h2>
+                Yoga Classes For Every Level
+            </h2>
+
+            <p>
+                Choose a practice that matches your experience,
+                schedule and personal goals.
+            </p>
+
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-icon">🧘</div>
+                <h3>Beginner Yoga</h3>
+                <p>
+                    A gentle introduction to basic yoga movements,
+                    breathing awareness and mindful practice.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌿</div>
+                <h3>Mindful Yoga</h3>
+                <p>
+                    A balanced practice combining movement, breathing
+                    and moments of focused awareness.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">☀️</div>
+                <h3>Daily Flow</h3>
+                <p>
+                    A structured flow for practitioners who want to
+                    maintain a regular yoga routine.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌸</div>
+                <h3>Gentle Yoga</h3>
+                <p>
+                    Comfortable, slower-paced sessions suitable for
+                    people who prefer a relaxed approach.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🕊️</div>
+                <h3>Breathing Practice</h3>
+                <p>
+                    Guided breathing and awareness exercises that can
+                    complement a regular yoga routine.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>Private Sessions</h3>
+                <p>
+                    Individual sessions designed around your experience,
+                    preferences and available schedule.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Simple Process
+            </div>
+
+            <h2>
+                Getting Started Is Easy
+            </h2>
+
+            <p>
+                Begin your yoga journey with three simple steps.
+            </p>
+
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="number">1</div>
+
+                <h3>
+                    Choose A Class
+                </h3>
+
+                <p>
+                    Select a yoga session that matches your experience
+                    and preferred schedule.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="number">2</div>
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    Send us your details and we will provide information
+                    about available sessions.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="number">3</div>
+
+                <h3>
+                    Start Practicing
+                </h3>
+
+                <p>
+                    Join your selected session and develop a consistent
+                    yoga practice at your own pace.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonial-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Community
+            </div>
+
+            <h2>
+                What Our Participants Say
+            </h2>
+
+            <p>
+                Replace these sample testimonials with genuine
+                reviews from your actual customers.
+            </p>
+
+        </div>
+
+        <div class="grid">
+
+            <div class="testimonial">
+
+                <p>
+                    "The sessions are easy to follow and the instructor
+                    creates a comfortable environment for beginners."
+                </p>
+
+                <strong>
+                    — Sample Participant
+                </strong>
+
+            </div>
+
+            <div class="testimonial">
+
+                <p>
+                    "I enjoy having a structured routine and the sessions
+                    are explained clearly."
+                </p>
+
+                <strong>
+                    — Sample Participant
+                </strong>
+
+            </div>
+
+            <div class="testimonial">
+
+                <p>
+                    "A welcoming experience that helped me become more
+                    consistent with my yoga practice."
+                </p>
+
+                <strong>
+                    — Sample Participant
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section id="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                FAQ
+            </div>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+        <div class="faq">
+
+            <details>
+                <summary>
+                    Do I need previous yoga experience?
+                </summary>
+
+                <p>
+                    No. Beginner-friendly sessions are available.
+                    Please select the class level that best matches
+                    your experience.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    What should I bring?
+                </summary>
+
+                <p>
+                    Comfortable clothing and a suitable yoga mat are
+                    recommended. Specific requirements may vary by class.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    Are classes available online?
+                </summary>
+
+                <p>
+                    Online availability depends on the current schedule.
+                    Contact us for the latest class information.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    Can I book a private session?
+                </summary>
+
+                <p>
+                    Private sessions may be available depending on
+                    instructor schedules. Contact us to discuss availability.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    Is yoga a medical treatment?
+                </summary>
+
+                <p>
+                    No. Our yoga sessions are educational and wellness
+                    activities and are not intended to diagnose, treat,
+                    cure or prevent any disease or medical condition.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container contact-grid">
+
+        <div class="contact-info">
+
+            <div class="eyebrow">
+                Contact Us
+            </div>
+
+            <h2>
+                Let's Begin Your Yoga Journey
+            </h2>
+
+            <p>
+                Have a question about our classes? Contact us and our
+                team will provide the information you need.
+            </p>
+
+            <div class="contact-item">
+
+                <strong>
+                    Business Name
+                </strong>
+
+                PureBalance Yoga
+
+            </div>
+
+            <div class="contact-item">
+
+                <strong>
+                    Email
+                </strong>
+
+                <a href="mailto:james118123@gmail.com">
+                    james118123@gmail.com
+                </a>
+
+            </div>
+
+            <div class="contact-item">
+
+                <strong>
+                    Phone
+                </strong>
+
+                <a href="tel:+61455548587">
+                    +61 455 548 587
+                </a>
+
+            </div>
+
+            <div class="contact-item">
+
+                <strong>
+                    Address
+                </strong>
+
+                47 President Ave, Sydney, Australia
+
+            </div>
+
+        </div>
+
+        <form onsubmit="submitForm(event)">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    id="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    id="phone"
+                    type="tel"
+                    autocomplete="tel"
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="class">
+                    Interested In
+                </label>
+
+                <select id="class">
+
+                    <option>
+                        Beginner Yoga
+                    </option>
+
+                    <option>
+                        Mindful Yoga
+                    </option>
+
+                    <option>
+                        Daily Flow
+                    </option>
+
+                    <option>
+                        Gentle Yoga
+                    </option>
+
+                    <option>
+                        Breathing Practice
+                    </option>
+
+                    <option>
+                        Private Session
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us how we can help..."
+                ></textarea>
+
+            </div>
+
+            <button class="btn" type="submit">
+                Send Enquiry
+            </button>
+
+            <p style="font-size:12px;color:#777;margin-top:12px;">
+                By submitting this form, you agree that we may use your
+                information to respond to your enquiry.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- PRIVACY POLICY -->
+
+<section class="legal" id="privacy">
+
+    <div class="container legal-box">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Legal
+            </div>
+
+            <h2>
+                Privacy Policy
+            </h2>
+
+            <p>
+                Last Updated: October 5, 2026
+            </p>
+
+        </div>
+
+        <p>
+            PureBalance Yoga ("we", "us", "our") respects your privacy.
+            This Privacy Policy explains how we collect, use and protect
+            information when you visit our website or contact us.
+        </p>
+
+        <h2>
+            1. Information We Collect
+        </h2>
+
+        <p>
+            We may collect information that you voluntarily provide,
+            including your name, email address, phone number and message
+            when you submit an enquiry form.
+        </p>
+
+        <p>
+            We may also collect limited technical information such as
+            browser type, device information and general website usage
+            information for security, analytics and website improvement.
+        </p>
+
+        <h2>
+            2. How We Use Information
+        </h2>
+
+        <ul>
+
+            <li>
+                To respond to enquiries.
+            </li>
+
+            <li>
+                To provide information about our classes and services.
+            </li>
+
+            <li>
+                To improve our website and user experience.
+            </li>
+
+            <li>
+                To maintain website security.
+            </li>
+
+            <li>
+                To comply with applicable legal requirements.
+            </li>
+
+        </ul>
+
+        <h2>
+            3. Cookies
+        </h2>
+
+        <p>
+            Our website may use cookies or similar technologies for
+            essential website functionality, analytics and improving
+            user experience. You can control cookies through your browser
+            settings where applicable.
+        </p>
+
+        <h2>
+            4. Third-Party Services
+        </h2>
+
+        <p>
+            We may use third-party services such as website analytics,
+            hosting, payment providers or advertising platforms. These
+            services may process information according to their own
+            privacy policies.
+        </p>
+
+        <h2>
+            5. Data Security
+        </h2>
+
+        <p>
+            We take reasonable measures to protect information submitted
+            through our website. However, no internet transmission or
+            storage system can be guaranteed to be completely secure.
+        </p>
+
+        <h2>
+            6. Data Retention
+        </h2>
+
+        <p>
+            We retain information only for as long as reasonably necessary
+            for the purposes described in this policy or as required by
+            applicable law.
+        </p>
+
+        <h2>
+            7. Your Rights
+        </h2>
+
+        <p>
+            Depending on applicable law, you may have rights regarding
+            access, correction or deletion of your personal information.
+            Contact us using the details below for privacy-related requests.
+        </p>
+
+        <h2>
+            8. Contact
+        </h2>
+
+        <p>
+            Email:
+            <a href="mailto:james118123@gmail.com">
+                james118123@gmail.com
+            </a>
+            <br>
+
+            Phone:
+            <a href="tel:+61455548587">
+                +61 455 548 587
+            </a>
+            <br>
+
+            Address:
+            47 President Ave, Sydney, Australia
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TERMS & CONDITIONS -->
+
+<section class="legal" id="terms">
+
+    <div class="container legal-box">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Legal
+            </div>
+
+            <h2>
+                Terms & Conditions
+            </h2>
+
+        </div>
+
+        <h2>
+            1. Acceptance of Terms
+        </h2>
+
+        <p>
+            By accessing or using this website, you agree to these Terms
+            & Conditions. If you do not agree with these terms, please
+            discontinue use of the website.
+        </p>
+
+        <h2>
+            2. Website Information
+        </h2>
+
+        <p>
+            The information provided on this website is for general
+            informational purposes regarding our yoga and wellness
+            services.
+        </p>
+
+        <h2>
+            3. Yoga Services
+        </h2>
+
+        <p>
+            Availability, schedules, pricing and class formats may change
+            from time to time. Please contact us for current information
+            before booking a session.
+        </p>
+
+        <h2>
+            4. User Responsibilities
+        </h2>
+
+        <p>
+            Users agree to provide accurate information when submitting
+            enquiries and to use this website only for lawful purposes.
+        </p>
+
+        <h2>
+            5. Intellectual Property
+        </h2>
+
+        <p>
+            Unless otherwise stated, website content including text,
+            graphics, branding and original materials belongs to
+            PureBalance Yoga or its respective licensors and may not be
+            reproduced without permission.
+        </p>
+
+        <h2>
+            6. Limitation of Liability
+        </h2>
+
+        <p>
+            To the extent permitted by applicable law, PureBalance Yoga
+            shall not be responsible for indirect or consequential losses
+            arising from use of the website or information provided through
+            it.
+        </p>
+
+        <h2>
+            7. Changes
+        </h2>
+
+        <p>
+            We may update these Terms & Conditions from time to time.
+            Updated terms will be posted on this page.
+        </p>
+
+        <h2>
+            8. Contact
+        </h2>
+
+        <p>
+            Email:
+            <a href="mailto:james118123@gmail.com">
+                james118123@gmail.com
+            </a>
+            <br>
+
+            Phone:
+            <a href="tel:+61455548587">
+                +61 455 548 587
+            </a>
+            <br>
+
+            Address:
+            47 President Ave, Sydney, Australia
+        </p>
+
+    </div>
+
+</section>
+
+<!-- DISCLAIMER -->
+
+<section class="legal" id="disclaimer">
+
+    <div class="container legal-box">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Important Information
+            </div>
+
+            <h2>
+                Disclaimer
+            </h2>
+
+        </div>
+
+        <h2>
+            General Wellness Information
+        </h2>
+
+        <p>
+            The content on this website is provided for general educational
+            and wellness purposes. It is not intended to constitute medical
+            advice, diagnosis or treatment.
+        </p>
+
+        <h2>
+            No Medical Guarantees
+        </h2>
+
+        <p>
+            We do not guarantee that yoga or any particular practice will
+            produce a specific health, fitness or wellness outcome.
+            Individual experiences may vary.
+        </p>
+
+        <h2>
+            Personal Responsibility
+        </h2>
+
+        <p>
+            Participants should practice within their own abilities and
+            comfort level. If you have a medical condition, injury,
+            pregnancy-related concern or other health concern, consult an
+            appropriately qualified healthcare professional before beginning
+            a new physical activity program.
+        </p>
+
+        <h2>
+            Emergency Situations
+        </h2>
+
+        <p>
+            Our website and yoga sessions are not intended for emergency
+            medical care. In an emergency, contact the appropriate local
+            emergency service.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- REFUND POLICY -->
+
+<section class="legal" id="refund">
+
+    <div class="container legal-box">
+
+        <div class="section-title">
+
+            <div class="eyebrow">
+                Payments
+            </div>
+
+            <h2>
+                Refund & Cancellation Policy
+            </h2>
+
+        </div>
+
+        <h2>
+            Cancellation
+        </h2>
+
+        <p>
+            Cancellation requests should be submitted using our official
+            contact details. The applicable cancellation terms will depend
+            on the service and booking conditions communicated at the time
+            of purchase.
+        </p>
+
+        <h2>
+            Refunds
+        </h2>
+
+        <p>
+            Where a refund is applicable, the refund will generally be
+            processed to the original payment method, subject to the
+            applicable payment provider and our refund terms.
+        </p>
+
+        <h2>
+            Non-Refundable Services
+        </h2>
+
+        <p>
+            Certain services, bookings or promotional offers may be
+            non-refundable when clearly communicated before purchase.
+        </p>
+
+        <h2>
+            Contact
+        </h2>
+
+        <p>
+            For cancellation or refund requests, contact:
+            <a href="mailto:james118123@gmail.com">
+                james118123@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    PureBalance Yoga
+                </h3>
+
+                <p>
+                    Guided yoga and mindful movement sessions designed
+                    to support a consistent wellness routine.
+                </p>
+
+                <p style="margin-top:15px;">
+
+                    <strong>
+                        Business Address:
+                    </strong>
+                    <br>
+
+                    47 President Ave,
+                    Sydney, Australia
+
+                </p>
+
+                <p style="margin-top:10px;">
+
+                    <strong>
+                        Email:
+                    </strong>
+
+                    <a href="mailto:james118123@gmail.com">
+                        james118123@gmail.com
+                    </a>
+
+                </p>
+
+                <p>
+
+                    <strong>
+                        Phone:
+                    </strong>
+
+                    <a href="tel:+61455548587">
+                        +61 455 548 587
+                    </a>
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#classes">Classes</a>
+                    </li>
+
+                    <li>
+                        <a href="#faq">FAQ</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Legal
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#privacy">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#terms">
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#disclaimer">
+                            Disclaimer
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#refund">
+                            Refund Policy
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 PureBalance Yoga.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- COOKIE NOTICE -->
+
+<div class="cookie" id="cookieBox">
+
+    <p>
+        We use cookies and similar technologies to improve website
+        functionality and understand website usage. By continuing to
+        use this website, you agree to our use of cookies where applicable.
+    </p>
+
+    <button class="btn" onclick="acceptCookies()">
+        Accept
+    </button>
+
+</div>
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("menu")
+        .classList
+        .toggle("active");
+
+}
+
+document.querySelectorAll(".menu a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        document
+            .getElementById("menu")
+            .classList
+            .remove("active");
+
+    });
+
+});
+
+function acceptCookies() {
+
+    localStorage.setItem(
+        "cookieAccepted",
+        "true"
+    );
+
+    document
+        .getElementById("cookieBox")
+        .style
+        .display = "none";
+
+}
+
+if (
+    localStorage.getItem("cookieAccepted") === "true"
+) {
+
+    document
+        .getElementById("cookieBox")
+        .style
+        .display = "none";
+
+}
+
+function submitForm(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting PureBalance Yoga. " +
+        "Your enquiry has been received."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
